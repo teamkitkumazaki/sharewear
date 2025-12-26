@@ -1,0 +1,45 @@
+.comp-category-list{
+  @include flexSet;
+  .category_item{
+    margin-right: 5px;
+    margin-bottom: 7px;
+    a{
+      display: block;
+      border: 1px solid $borderColor;
+      padding: 6px 10px;
+      border-radius: 200px;
+      color: inherit;
+      font-size: 1.2rem;
+      background: #fff;
+      span{
+        color: #4A86FF;
+      }
+      &.active{
+        color: #fff;
+        background-image: linear-gradient(to right, $keyColor 0%, $insertColor 100%);
+        pointer-events: none;
+        span{
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-category-list{
+    .category_item{
+      margin-right: 7px;
+      margin-bottom: 10px;
+      a{
+        padding: 8px 15px;
+        font-size: 1.4rem;
+        transition: background .3s;
+        will-change: background;
+        &:hover{
+          background: $borderColor;
+        }
+      }
+    }
+  }
+}

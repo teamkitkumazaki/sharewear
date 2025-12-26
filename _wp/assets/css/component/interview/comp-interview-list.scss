@@ -1,0 +1,215 @@
+.comp-interview-list{
+  .interview_item{
+    position: relative;
+    background: #fff;
+    box-shadow: 2px 5px 6px 2px rgba($fontColor, 0.2);
+    padding-bottom: 40px;
+    margin-bottom: 30px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+    .interview_img{
+      a{
+        display: block;
+      }
+    }
+    .interview_txt{
+      padding: 20px 15px;
+      .comp-category-list{
+        margin-bottom: 5px !important;
+      }
+      .interview_ttl{
+        padding: 0 3px;
+        a{
+          font-size: 1.8rem;
+          line-height: 1.5;
+          color: inherit;
+        }
+      }
+      .interview_lower{
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        @include flexSet;
+        justify-content: space-between;
+        align-items: center;
+        .date{
+          font-size: 1.4rem;
+          color: #969696;
+        }
+        .link_button{
+          a{
+            @include flexSet;
+            align-items: center;
+            font-size: 1.5rem;
+            color: inherit;
+            .txt{
+              padding-right: 7px;
+              margin-bottom: 2px;
+            }
+            .arrow{
+              position: relative;
+              width: 20px;
+              height: 18px;
+              &::before{
+                display: block;
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top:0;
+                bottom:0;
+                right:0;
+                margin: auto;
+                background-image: url(../img/common/arrow_purple.svg);
+                background-size: 16px;
+                background-position: center center;
+                background-repeat: no-repeat;
+              }
+            }
+          }
+        }
+      }
+    }
+    &::after{
+      display: block;
+      content: "";
+      position: absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      margin: auto;
+      width: 100%;
+      height: 3px;
+      background-image: linear-gradient(to right, $keyColor 0%, $insertColor 100%);
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-interview-list{
+    @include flexSet;
+    .interview_item{
+      width: 31%;
+      margin-right: 3.5%;
+      padding-bottom: 60px;
+      margin-bottom: 50px;
+      &:nth-of-type(3n){
+        margin-right: 0;
+      }
+      &:nth-last-of-type(1){
+        margin-bottom: 50px;
+      }
+      .interview_img{
+        a{
+          display: block;
+          overflow: hidden;
+          img{
+            transition: transform .3s, filter .3s;
+            will-change: transform,filter;
+          }
+          &:hover{
+            img{
+              transform: scale(1.05);
+              filter: brightness(0.95);
+            }
+          }
+        }
+      }
+      .interview_txt{
+        padding: 20px 15px;
+        .comp-category-list{
+          margin-bottom: 5px !important;
+          .category_item{
+            a{
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .interview_ttl{
+          padding: 0 3px;
+          a{
+            font-size: 1.8rem;
+            line-height: 1.5;
+            color: inherit;
+            transition: color .3s;
+            will-change: color;
+            &:hover{
+              color: $hoverColor;
+            }
+          }
+        }
+        .interview_lower{
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          right: 20px;
+          @include flexSet;
+          justify-content: space-between;
+          align-items: center;
+          .date{
+            font-size: 1.4rem;
+            color: #969696;
+          }
+          .link_button{
+            a{
+              @include flexSet;
+              align-items: center;
+              font-size: 1.5rem;
+              color: inherit;
+              transition: color .3s;
+              will-change: color;
+              .txt{
+                padding-right: 7px;
+                margin-bottom: 2px;
+              }
+              .arrow{
+                position: relative;
+                width: 24px;
+                height: 18px;
+                &::before{
+                  display: block;
+                  content: "";
+                  position: absolute;
+                  width: 100%;
+                  height: 100%;
+                  top:0;
+                  bottom:0;
+                  right:0;
+                  margin: auto;
+                  background-image: url(../img/common/arrow_purple.png);
+                  background-size: 24px;
+                  background-position: center left 0px;
+                  background-repeat: repeat-x;
+                  transition: background .3s;
+                  will-change: background;
+                }
+              }
+              &:hover{
+                color: $hoverColor;
+                .arrow{
+                  &::before{
+                    background-position: center left 24px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &::after{
+        display: block;
+        content: "";
+        position: absolute;
+        bottom:0;
+        left:0;
+        right:0;
+        margin: auto;
+        width: 100%;
+        height: 3px;
+        background-image: linear-gradient(to right, $keyColor 0%, $insertColor 100%);
+      }
+    }
+  }
+}

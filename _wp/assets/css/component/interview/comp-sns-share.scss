@@ -1,0 +1,37 @@
+.comp-sns-share{
+  margin-top: 60px;
+  .share_ttl{
+    font-size: 2.0rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  .sns_wrapper{
+    @include flexSet;
+    justify-content: center;
+    .sns_item{
+      width: 45px;
+      margin-right: 20px;
+      &:nth-last-of-type(1){
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-sns-share{
+    margin-top: 100px;
+    .share_ttl{
+      font-size: 2.0rem;
+      font-weight: 400;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .sns_item{
+      a{
+        @include hover;
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.page-404{
+  .section-404{
+    @include flexSet;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    margin-bottom: 0px;
+  }
+  .section_inner_new{
+    .contact_ttl{
+      @include roboto;
+      font-weight: 400;
+      font-size: 3.6rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .contact_desc{
+      text-align: center;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      margin-bottom: 30px;
+    }
+    .comp-admin-button{
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .page-404{
+    .section_inner_new{
+      .contact_ttl{
+        font-size: 4.2rem;
+        margin-bottom: 25px;
+      }
+      .contact_desc{
+        text-align: center;
+        font-size: 1.6rem;
+        letter-spacing: 0.08em;
+        margin-bottom: 40px;
+      }
+      .comp-admin-button{
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

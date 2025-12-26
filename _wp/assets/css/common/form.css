@@ -1,0 +1,173 @@
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: solid 1px #fff;
+  font-size: 1.4rem;
+  letter-spacing: 0.2px;
+  color: inherit;
+}
+@media screen and (max-width: 780px) {
+  select {
+    font-size: 1.6rem;
+  }
+}
+select:focus {
+  outline: none;
+  border: none;
+}
+
+::-webkit-input-placeholder {
+  color: #aaa;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+::-moz-placeholder {
+  color: #aaa;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+:-ms-input-placeholder {
+  color: #aaa;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+::-ms-input-placeholder {
+  color: #aaa;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+::placeholder {
+  color: #aaa;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+@media screen and (max-width: 780px) {
+  ::-webkit-input-placeholder {
+    font-size: 1.6rem;
+  }
+  ::-moz-placeholder {
+    font-size: 1.6rem;
+  }
+  :-ms-input-placeholder {
+    font-size: 1.6rem;
+  }
+  ::-ms-input-placeholder {
+    font-size: 1.6rem;
+  }
+  ::placeholder {
+    font-size: 1.6rem;
+  }
+}
+
+select option::-webkit-input-placeholder {
+  color: #444;
+}
+
+select option::-moz-placeholder {
+  color: #444;
+}
+
+select option:-ms-input-placeholder {
+  color: #444;
+}
+
+select option::-ms-input-placeholder {
+  color: #444;
+}
+
+select option::placeholder {
+  color: #444;
+}
+
+::-webkit-placeholder {
+  /*padding-top: 0.25em;*/
+}
+
+::-moz-placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #aaa;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  color: #aaa;
+}
+
+textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 5px;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+@media screen and (max-width: 780px) {
+  textarea {
+    font-size: 16rem;
+  }
+}
+
+input {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=number] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 3px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  border-radius: 0;
+  border: 1px solid #979797;
+  padding: 0 5px;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 780px) {
+  input[type=text],
+  input[type=email],
+  input[type=tel],
+  input[type=number] {
+    font-size: 1.6rem;
+  }
+}
+
+input[type=submit],
+input[type=button] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+input[type=submit]:hover,
+input[type=button]:hover {
+  opacity: 0.7;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}

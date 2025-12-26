@@ -1,0 +1,32 @@
+.page-interview-list{
+  .section-underpage-contents{
+    .section_inner{
+      .inner_box{
+        .category_wrapper{
+          .comp-category-list{
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 980px){
+  .page-interview-list{
+    .section-underpage-contents{
+      .section_inner{
+        .inner_box{
+          .category_wrapper{
+            .comp-category-list{
+              justify-content: center;
+              margin-bottom: 80px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

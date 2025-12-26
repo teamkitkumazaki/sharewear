@@ -1,0 +1,66 @@
+.comp-index-title{
+  hgroup{
+    .ttl_en{
+      display: block;
+      @include roboto;
+      font-size: 3.4rem;
+      line-height: 1.5;
+      margin-bottom: 5px;
+      text-indent: -0.05em;
+    }
+    .ttl_jp{
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+  .desc_wrapper{
+    margin-top: 25px;
+    @include basicP;
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-index-title{
+    position: relative;
+    @include flexSet;
+    align-items: flex-start;
+    justify-content: space-between;
+    &::before{
+      display: block;
+      content: "";
+      position: absolute;
+      right: -9vw;
+      top: 30px;
+      width: 0;
+      height: 3px;
+      background-image: linear-gradient(to right, $keyColor 0%, $insertColor 100%);
+      transition: width .5s cubic-bezier(0.5, 1, 0.89, 1);
+      will-change: width;
+    }
+    hgroup{
+      .ttl_en{
+        font-size: 6.0rem;
+        margin-bottom: 5px;
+      }
+      .ttl_jp{
+        font-size: 2.0rem;
+      }
+    }
+    .desc_wrapper{
+      width: 50%;
+      margin-top: 15px;
+    }
+  }
+
+  .effect2{
+    .comp-index-title{
+      position: relative;
+      @include flexSet;
+      align-items: flex-start;
+      justify-content: space-between;
+      &::before{
+        width: 30%;
+      }
+    }
+  }
+}

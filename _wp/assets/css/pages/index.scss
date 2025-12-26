@@ -1,0 +1,204 @@
+.page-index{
+  .section-main{
+    margin-bottom: -20px;
+  }
+  .section-lead{
+    position: relative;
+    z-index: 10;
+    margin-bottom: -20px;
+    padding: 13vw 0 16vw;
+    transition: background .5s cubic-bezier(0.5, 1, 0.89, 1);
+    &::before{
+      display: block;
+      content: "";
+      position: absolute;
+      top:0;
+      left:-20px;
+      right:-20px;
+      margin: auto;
+      width: calc(100% + 40px);
+      height: 100%;
+      border-radius: 20px;
+      background: #fff;
+      transition: width 1s cubic-bezier(0.5, 1, 0.89, 1);
+
+    }
+    .section_box{
+      position: relative;
+      z-index: 10;
+      .lead_txt_wrap{
+        @include flexSet;
+        justify-content: center;
+        margin-top: 15vw;
+        box-sizing: border-box;
+        @include wrapper;
+        .wrap_inner{
+          p{
+            font-size: 1.6rem;
+            line-height: 2.2;
+          }
+        }
+      }
+    }
+    &.effect{
+      &::before{
+        width: calc(100% - 150px);
+        border-radius: 20px;
+      }
+    }
+  }
+  .section-service{
+    position: relative;
+    padding: calc(16vw + 20px) 0 calc(18vw + 20px);
+    background-color: #2D2C34;
+    color: #fff;
+    margin-bottom: -20px;
+    &::before{
+      display: block;
+      content: "";
+      position: absolute;
+      z-index: 5;
+      width: 100%;
+      height: 100%;
+      top:0;
+      left:0;
+      background-size: 100vw;
+      background-image: url(../img/index/service_bg.png);
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
+    .section_inner{
+      position: relative;
+      z-index: 10;
+      .comp-index-title{
+        margin-bottom: 20px;
+        &::before{
+          display: none;
+        }
+      }
+      .service_synergy{
+        margin-top: 35px;
+        .comp-link-button{
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+  .section-vision{
+    z-index: 10;
+    background-image: url(../img/index/vision_bg.jpg);
+    background-size: cover;
+    background-position: center top;
+    color: #fff;
+  }
+  .section-environment{
+    z-index: 11;
+    background: $bgColor;
+  }
+  .section-interview{
+    z-index: 12;
+    background: #fff;
+  }
+  .section-faq{
+    z-index: 13;
+    background: $bgColor;
+    padding-bottom: 13vw;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 980px){
+  .page-index{
+    .section-main{
+      margin-bottom: -60px;
+      .img_wrap{
+        width: 100%;
+        height: calc(100vh + 60px);
+        img{
+          object-fit: contain;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .section-lead{
+      position: relative;
+      z-index: 10;
+      margin-bottom: -60px;
+      padding: 160px 0 120px;
+      &::before{
+        width: calc(100% + 120px);
+        left: -60px;
+        right: -60px;
+        border-radius: 60px;
+        transition: width 1.5s cubic-bezier(0.5, 1, 0.89, 1);
+      }
+      .section_box{
+        .lead_txt_wrap{
+          margin-top: 100px;
+          @include wrapper;
+          .wrap_inner{
+            p{
+              font-size: 2.0rem;
+              line-height: 2.2;
+              br{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      &.effect{
+        &::before{
+          width: calc(100% - 200px);
+          border-radius: 60px;
+        }
+      }
+    }
+    .section-service{
+      padding: calc(120px + 60px) 0 calc(120px + 60px);
+      margin-bottom: -60px;
+      &::before{
+        background-image: url(../img/index/service_bg_pc.svg);
+      }
+      .section_inner{
+        position: relative;
+        z-index: 10;
+        .comp-index-title{
+          margin-bottom: 60px;
+        }
+        .service_synergy{
+          margin-top: 60px;
+          .img_wrap{
+            width: 60%;
+            margin: 0 auto;
+            img{
+              width: 100%;
+            }
+          }
+          .comp-link-button{
+            max-width: 260px;
+            margin: 60px auto 0;
+          }
+        }
+      }
+    }
+    .section-vision{
+      background-image: url(../img/index/vision_bg_pc.jpg);
+    }
+    .section-interview{
+      .section_wrapper{
+        .comp-index-title{
+          margin-bottom: -40px;
+        }
+        .link_flex_wrapper{
+
+        }
+      }
+    }
+    .section-faq{
+      padding-bottom: 120px;
+      margin-bottom: 0;
+    }
+  }
+}

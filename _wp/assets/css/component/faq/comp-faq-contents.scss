@@ -1,0 +1,159 @@
+.comp-faq-contents{
+  .item_wrap{
+    margin-bottom: 50px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+    .ttl_h3{
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 25px;
+    }
+    .toggle_item{
+      position: relative;
+      overflow: hidden;
+      transition: height .2s, color .2s;
+      will-change: height, color;
+      min-height: 55px;
+      background: #fff;
+      border-radius: 10px;
+      margin-bottom: 7px;
+      &::before{
+        display: block;
+        content: "";
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, $keyColor 0%, $insertColor 100%);
+        opacity: 0;
+        transition: opacity .1s;
+        will-change: opacity;
+      }
+      .toggle_button{
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        padding: 15px 40px;
+        font-family: inherit;
+        font-size: 1.4rem;
+        letter-spacing: 0.03em;
+        color: inherit;
+        line-height: 1.5;
+        text-align: left;
+        background: transparent;
+        border: solid 0px #d8d8d8;
+        &::before{
+          display: block;
+          content: "Q.";
+          position: absolute;
+          @include roboto;
+          color: #6D66FE;
+          font-size: 1.6rem;
+          top: 14px;
+          left: 15px;
+          margin: auto;
+          width: 15px;
+          height: 15px;
+          transition: color .2s;
+          will-change: color;
+        }
+        &::after{
+          display: block;
+          content: "";
+          position: absolute;
+          bottom: 0px;
+          top: 0;
+          right: 20px;
+          margin: auto;
+          width: 8px;
+          height: 8px;
+          border-top: 1px solid #6D66FE;
+          border-right: 1px solid #6D66FE;
+          transform: rotate(135deg);
+          transform-origin: center center;
+          transition: border .3s, transform .3s;
+          will-change: border, transform;
+        }
+      }
+      .toggle_contents{
+        position: relative;
+        z-index: 10;
+        .contents_inner{
+          padding: 0px 20px 15px;
+          position: relative;
+          line-height: 1.8;
+          font-size: 1.4rem;
+          letter-spacing: 0.05em;
+          p{
+            span{
+              display: block;
+              margin-bottom: 0.75em;
+              &:nth-last-of-type(1){
+                margin-bottom: 0;
+              }
+            }
+            a{
+              color: inherit;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      &.active{
+        color: #fff;
+        &::before{
+          opacity: 1;
+        }
+        .toggle_button{
+          &::before{
+            color: #fff;
+          }
+          &::after{
+            border-top: 1px solid #fff;
+            border-right: 1px solid #fff;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 720px){
+  .comp-faq-contents{
+    max-width: 820px;
+    margin: 0 auto;
+    .item_wrap{
+      margin-bottom: 80px;
+      .ttl_h3{
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+      }
+      .toggle_item{
+        margin-bottom: 12px;
+        .toggle_button{
+          font-size: 1.6rem;
+          cursor: pointer;
+          &::before{
+            font-size: 1.6rem;
+          }
+          &::after{
+            width: 12px;
+            height: 12px;
+            bottom: 4px;
+          }
+        }
+        .toggle_contents{
+          position: relative;
+          z-index: 10;
+          .contents_inner{
+            padding: 0px 20px 15px;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

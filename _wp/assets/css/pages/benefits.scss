@@ -1,0 +1,41 @@
+.page-benefits{
+  .section-benefit2{
+    padding-bottom: 15vw;
+    background: $bgColor;
+  }
+  .section-kufu{
+    padding: 13vw 0 calc(13vw + 20px);
+    background: $bgColor;
+    margin-bottom: -20px;
+  }
+  .section-numbers{
+    padding: 13vw 0;
+    border-radius: 20px 20px 0 0;
+    background: #fff;
+  }
+}
+
+@media screen and (min-width: 980px){
+  .page-benefits{
+    .section-benefit2{
+      padding-bottom: 120px;
+    }
+    .section-recruit-link{
+      width: calc(100% - 100px);
+      margin: auto;
+      border-radius: 30px;
+      &:nth-last-of-type(1){
+        width: 100%;
+        border-radius: 0px;
+      }
+    }
+    .section-kufu{
+      padding: 120px 0 calc(60px + 60px);
+      margin-bottom: -60px;
+    }
+    .section-numbers{
+      padding: 120px 0;
+      border-radius: 60px 60px 0 0;
+    }
+  }
+}

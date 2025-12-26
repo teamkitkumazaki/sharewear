@@ -1,0 +1,125 @@
+.comp-benefit-list{
+  width: 90vw;
+  margin-left: -3vw;
+  .benefits_ttl{
+    font-size: 2.0rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .list_wrapper{
+    @include flexSet;
+    border: 1px solid #4CABFF;
+    border-bottom: 0px;
+    .list_item{
+      width: 50%;
+      box-sizing: border-box;
+      background: #fff;
+      border-bottom: 1px solid #4CABFF;
+      &.wide{
+        width: 100%;
+        border-right: 0px !important;
+      }
+      &:nth-of-type(odd){
+        border-right: 1px solid #4CABFF;
+      }
+      .benefit_txt{
+        padding: 15px;
+        .ttl_wrap{
+          @include flexSet;
+          justify-content: center;
+          align-items: center;
+          height: 42px;
+          margin-bottom: 15px;
+          .benefit_ttl{
+            font-size: 1.6rem;
+            line-height: 1.5;
+            text-align: center;
+            span{
+              display: block;
+              font-size: 1.2rem;
+            }
+          }
+        }
+        .benefit_desc{
+          font-size: 1.2rem;
+          line-height: 1.78;
+        }
+      }
+    }
+  }
+  &.list01{
+    .list_wrapper{
+      border: 1px solid #4CABFF;
+      border-bottom: 0px;
+      .list_item{
+        border-bottom: 1px solid #4CABFF;
+        &:nth-of-type(odd){
+          border-right: 1px solid #4CABFF;
+        }
+      }
+    }
+  }
+  &.list02{
+    .list_wrapper{
+      border: 1px solid #FFA259;
+      border-bottom: 0px;
+      .list_item{
+        border-bottom: 1px solid #FFA259;
+        &:nth-of-type(odd){
+          border-right: 1px solid #FFA259;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px){
+  .comp-benefit-list{
+    width: 100%;
+    margin-left: 0;
+    .benefits_ttl{
+      font-size: 3.0rem;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .list_wrapper{
+      @include flexSet;
+      border: 1px solid #4CABFF;
+      border-right: 0px !important;
+      border-bottom: 0px;
+      .list_item{
+        width: 20%;
+        border-right: 1px solid #4CABFF;
+        box-sizing: border-box;
+        &.wide{
+          width: 20%;
+          border-right: 0px !important;
+        }
+        .benefit_txt{
+          padding: 20px;
+          .ttl_wrap{
+            height: 55px;
+            margin-bottom: 15px;
+            .benefit_ttl{
+              font-size: 2.0rem;
+              span{
+                font-size: 1.4rem;
+              }
+            }
+          }
+          .benefit_desc{
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+    &.list02{
+      .list_wrapper{
+        .list_item{
+          border-right: 1px solid #FFA259 !important;
+        }
+      }
+    }
+  }
+
+}

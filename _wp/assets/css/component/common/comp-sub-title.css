@@ -1,0 +1,21 @@
+.comp-sub-title {
+  font-size: 2.6rem;
+  line-height: 1.54;
+  margin-bottom: 20px;
+}
+.comp-sub-title span {
+  display: block;
+}
+.comp-sub-title.white {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .comp-sub-title {
+    font-size: 3.2rem;
+    margin-bottom: 35px;
+  }
+  .comp-sub-title span {
+    display: inline;
+  }
+}

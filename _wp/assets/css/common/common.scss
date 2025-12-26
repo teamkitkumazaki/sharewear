@@ -1,0 +1,98 @@
+html{
+	font-size: 9px;
+	@media screen and (min-width: 351px){
+		font-size: 10px;
+	}
+	@media screen and (min-width: 980px){
+		font-size: 9px;
+	}
+	@media screen and (min-width: 1341px){
+		font-size: 10px;
+	}
+	@media screen and (min-width: 1700px){
+		font-size: 11px;
+	}
+}
+
+body {
+	width: 100%;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+	font-size: 1.4rem;
+  line-height: 1;
+	letter-spacing: 0.03em;
+  color: $fontColor;
+	background: #fff;
+	font-weight: 500; // 400 regulat 500 medium 600 semibold 700 bold
+	font-style: normal;
+	font-family: YakuHanJP,"Noto Sans JP", 'TsukuGoPr5-D', "ヒラギノ角ゴ ProN W3", "HiraKakuProN-W3", "ヒラギノ角ゴ Pro W3", "HiraKakuPro-W3", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS Pgothic", "Osaka", sans-serif, Helvetica, Helvetica Neue, Arial, Verdana;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+body.bind {
+	@media screen and (min-width: 981px){
+		position: fixed;
+	  width: 100%;
+	  height: 100vh;
+	  overflow: hidden;
+	}
+}
+h1,h2,h3,h4,h5{
+	font-weight: 500;
+}
+article{
+	position: relative;
+	z-index: 2;
+	min-height: 100vh;
+	transition: opacity 2s;
+	will-change: opacity;
+	overflow: hidden;
+	&.loading{
+		opacity: 0;
+	}
+}
+
+section{
+	.section_inner{
+		@include wrapper;
+		@media screen and (min-width: 720px) {
+			min-width: 1200px;
+		}
+	}
+}
+
+button{
+	font-family: inherit;
+	font-weight: inherit;
+	background: transparent;
+	appearance: none;
+	border: none;
+	margin:0;
+	padding: 0;
+	color: inherit;
+	cursor: pointer;
+	&:focus{
+		outline: none;
+	}
+}
+
+
+
+.pc_img{
+	display: none;
+}
+
+@media screen and (min-width: 768px){
+	.sp_img{
+		display: none;
+	}
+	.pc_img{
+		display: block;
+	}
+}
+
+.ly_sectionForm, .ly_sectionPage, .ly_sectionTop{
+	padding: 0 !important;
+
+}

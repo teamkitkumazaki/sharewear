@@ -1,0 +1,35 @@
+.comp-workspace-feature{
+  .feature_item{
+    margin-bottom: 40px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+    .feature_img{
+      margin-bottom: 15px;
+    }
+    .feature_txt{
+      @include basicP;
+    }
+  }
+}
+
+
+@media screen and (min-width: 980px){
+  .comp-workspace-feature{
+    @include flexSet;
+    .feature_item{
+      width: 31%;
+      margin-right: 3.5%;
+      margin-bottom: 75px;
+      &:nth-of-type(3n){
+        margin-right: 0;
+      }
+      &:nth-last-of-type(1){
+        margin-bottom: 60px;
+      }
+      .feature_img{
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
