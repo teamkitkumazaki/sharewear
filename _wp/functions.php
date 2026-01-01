@@ -20,12 +20,6 @@ function disable_redirect_canonical( $redirect_url ) {
 update_option( 'home', 'https://izumigaoka-cc.com/' );*/
 
 
-function remove_menus() {
-  remove_menu_page( 'edit.php' ); // 投稿
-}
-
-add_action( 'admin_menu', 'remove_menus', 999 );
-
 //カスタム投稿タイプの追加
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
@@ -37,12 +31,12 @@ function create_post_type() {
   ];
   //カスタム投稿タイプ１（商品）
   register_post_type(
-    'interview',  // カスタム投稿名
+    'product',  // カスタム投稿名
     array(
       'labels' => array(
-        'name' => __( 'インタビュー' ), // 管理画面の左メニューに表示されるテキスト
-        'singular_name' => __( 'interview' ),
-        'rewrite' => array('slug' => 'interview-post'),
+        'name' => __( '商品' ), // 管理画面の左メニューに表示されるテキスト
+        'singular_name' => __( 'product' ),
+        'rewrite' => array('slug' => 'product-post'),
         'rewrite' => array( 'with_front' => false ),
       ),
       'public' => true,  // 投稿タイプをパブリックにするか否か
@@ -50,34 +44,14 @@ function create_post_type() {
       'has_archive' => true,  // アーカイブを有効にするか否か
       'supports' => array(
         'title',
+        'editor',
         'custom-fields',
         'thumbnail'
       )
     )
   );
-  register_taxonomy(
-    'interview-category', //タグ名（任意）
-    'interview', //カスタム投稿名
-    array(
-      'hierarchical' => true, //タグタイプの指定（階層をもつかどうか？）
-      //ダッシュボードに表示させる名前
-      'label' => 'カテゴリ',
-      'show_in_rest' => true,
-      'public' => true,
-      'show_ui' => true,
-      'rewrite' => true,
-    )
-  );
 }
 
-function post_output_css() {
-    $pt = get_post_type();
-    if ($pt == 'page' || $pt == 'post') {
-        $hide_postdiv_css = '<style type="text/css">#postdiv, #postdivrich { display: none; }</style>';
-        echo $hide_postdiv_css;
-    }
-}
-add_action('admin_head', 'post_output_css');
 
 function catch_that_image() {
   global $post, $posts;

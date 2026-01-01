@@ -1,0 +1,76 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+#下層ページ
+
+RewriteCond %{QUERY_STRING} (^|&)page_id=7(&|$)
+RewriteRule ^$ http://sharewear.jp/product? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=10(&|$)
+RewriteRule ^$ http://sharewear.jp/about? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=170(&|$)
+RewriteRule ^$ http://sharewear.jp/supporter? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=172(&|$)
+RewriteRule ^$ http://sharewear.jp/designer? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=174(&|$)
+RewriteRule ^$ http://sharewear.jp/process? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=14(&|$)
+RewriteRule ^$ http://sharewear.jp/company? [L,R=301]
+
+#Product
+
+RewriteCond %{QUERY_STRING} (^|&)page_id=483(&|$)
+RewriteRule ^$ https://sharewear.jp/product/483? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=276(&|$)
+RewriteRule ^$ https://sharewear.jp/product/276? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=503(&|$)
+RewriteRule ^$ https://sharewear.jp/product/503? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=225(&|$)
+RewriteRule ^$ https://sharewear.jp/product/225? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=254(&|$)
+RewriteRule ^$ https://sharewear.jp/product/254? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=258(&|$)
+RewriteRule ^$ https://sharewear.jp/product/258? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=261(&|$)
+RewriteRule ^$ https://sharewear.jp/product/261? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=263(&|$)
+RewriteRule ^$ https://sharewear.jp/product/263? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=269(&|$)
+RewriteRule ^$ https://sharewear.jp/product/269? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=272(&|$)
+RewriteRule ^$ https://sharewear.jp/product/272? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=274(&|$)
+RewriteRule ^$ https://sharewear.jp/product/274? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)page_id=276(&|$)
+RewriteRule ^$ https://sharewear.jp/product/276? [L,R=301]
+
+
+#お知らせ
+RewriteCond %{QUERY_STRING} (^|&)p=575(&|$)
+RewriteRule ^$ https://sharewear.jp/post575? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=552(&|$)
+RewriteRule ^$ https://sharewear.jp/post552? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=432(&|$)
+RewriteRule ^$ https://sharewear.jp/post432? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=398(&|$)
+RewriteRule ^$ https://sharewear.jp/post398? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=391(&|$)
+RewriteRule ^$ https://sharewear.jp/post391? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=381(&|$)
+RewriteRule ^$ https://sharewear.jp/post381? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=371(&|$)
+RewriteRule ^$ https://sharewear.jp/post371? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=388(&|$)
+RewriteRule ^$ https://sharewear.jp/post388? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=352(&|$)
+RewriteRule ^$ https://sharewear.jp/post352? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=364(&|$)
+RewriteRule ^$ https://sharewear.jp/post364? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=287(&|$)
+RewriteRule ^$ https://sharewear.jp/post287? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=322(&|$)
+RewriteRule ^$ https://sharewear.jp/post322? [L,R=301]
+RewriteCond %{QUERY_STRING} (^|&)p=189(&|$)
+RewriteRule ^$ https://sharewear.jp/post189? [L,R=301]
+
+
+</IfModule>

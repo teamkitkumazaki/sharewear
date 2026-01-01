@@ -1,53 +1,26 @@
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5R3JVZN"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 
-<header <?php if ( is_home() || is_front_page() ):?>class="index"<?php endif; ?>>
-	<div class="header_inner">
-		<div class="header_logo">
-			<a href="/recruit">
-				<img src="<?php echo get_template_directory_uri();?>/assets/img/common/h_logo.svg">
-			</a>
-		</div>
-		<div class="header_navigation">
-			<nav class="navigation_list">
-				<ul>
-					<li><a href="/recruit/benefits">働きやすさと成長支援</a></li>
-					<li><a href="/recruit/interview">メンバーインタビュー</a></li>
-					<li><a href="/recruit/faq">よくある質問</a></li>
-				</ul>
-				<div class="comp-link-button flex">
-					<div class="button_item">
-						<a target="_blank" class="blue" href="https://recruit.jobcan.jp/suai/list?category_id=48915">
-							<span class="arrow left">
-								<span class="arrow_inner"></span>
-							</span>
-							<span class="txt align_left">新卒採用</span>
-							<span class="arrow right">
-								<span class="arrow_inner"></span>
-							</span>
-						</a>
-					</div>
-					<div class="button_item">
-						<a target="_blank" class="red align_left" href="https://recruit.jobcan.jp/suai/list?category_id=48916">
-							<span class="arrow left">
-								<span class="arrow_inner"></span>
-							</span>
-							<span class="txt align_left">中途採用</span>
-							<span class="arrow right">
-								<span class="arrow_inner"></span>
-							</span>
-						</a>
-					</div>
-				</div><!-- comp-link-button -->
-			</nav>
-			<div class="header_menu">
-				<button id="humButton" title="menu">
-					<span></span>
-					<span></span>
-				</button>
+<header id="header-main" role="banner">
+	<!-- begin header -->
+	<ul id="headerbanner" class="clearfix">
+		<li id="header_logo" class="mainl">
+			<div id="site-logo" class="siteheader">
+				<h1>shareWear</h1><a href="http://sharewear.jp/"><img src="<?php echo get_template_directory_uri();?>/assets/img/header-logo.png" alt="shareWear"></a>
 			</div>
-		</div>
-	</div><!-- header_inner -->
-</header>
+		</li>
+		<li id="nav" class="mainl">
+			<nav class="clear fl" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+				<ul id="menu-%e3%83%a1%e3%82%a4%e3%83%b3%e3%83%a1%e3%83%8b%e3%83%a5%e3%83%bc" class="menu">
+					<li id="menu-item-167" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-167"><a href="http://sharewear.jp/">HOME</a></li>
+					<li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="http://sharewear.jp/?page_id=7">PRODUCT</a></li>
+					<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="http://sharewear.jp/?page_id=10">ABOUT</a></li>
+					<li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-178"><a href="http://sharewear.jp/?page_id=170">SUPPORT RECIPIENT</a></li>
+					<li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="http://sharewear.jp/?page_id=172">DESIGNER</a></li>
+					<li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="http://sharewear.jp/?page_id=174">PROCESS</a></li>
+					<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="http://sharewear.jp/?page_id=14">COMPANY</a></li>
+				</ul>
+			</nav>
+		</li>
+	</ul> <!-- end headerbanner -->
+	<div id="social-icons" class="small"></div>
+</header> <!-- end header -->

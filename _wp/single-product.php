@@ -23,7 +23,6 @@
 					<header>
 						<hgroup>
 							<h1 class="posttitle"><a href="javascript:void(0);" title="<?= $page_ttl;?>" rel="bookmark"><?= $page_ttl;?></a></h1>
-							<h2 class="meta"><?php echo get_the_date('Y年n月j日'); ?>&nbsp;•&nbsp;<a href="http://sharewear.jp/?cat=5" title="NEWS の投稿をすべて表示" rel="category">NEWS</a></h2>
 						</hgroup>
 					</header>
 					<div class="storycontent">
